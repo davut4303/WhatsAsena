@@ -259,4 +259,4 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
     }
 }
 
-whatsAsena();
+whatsAsen();

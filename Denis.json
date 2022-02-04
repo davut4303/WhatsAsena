@@ -1,1 +1,9 @@
-{"clientID":"4DGsuu21VfeXgHwQjyrMSA==","serverToken":"1@LIijFVEMg9+OV0Iu45RA8mR2/45yI1sYtGK3ySBQAq5n771kzszzER5vzBY1PqziOBl2UH/hl7DhRQ==","clientToken":"DQbEBgQROVsJjsVsHMv9xL1ngMCEHqyTM/Z7NtKFYps=","encKey":"0sGCAgvYvO02cTzQOMRk2fDQ1lLsjibRO5ohGCTKANs=","macKey":"CinHQLHDZ1ds1bPhczHvFk4VxFN927/SC2Pbg8sje5Y="}
+FROM fusuf/whatsasena:latest
+
+RUN git clone https://github.com/davut4303/WhatsAsena /root/WhatsAsenaDuplicated
+WORKDIR /root/WhatsAsenaDuplicated/
+ENV TZ=Europe/Istanbul
+RUN npm install supervisor -g
+RUN yarn install --no-audit
+
+CMD ["node", "bot.js"]
